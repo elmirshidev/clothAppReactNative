@@ -15,4 +15,5 @@ export interface Product {
   reviews: number;
   longDesc: string;
   availableColors: string[];
+  images: string[];
 }

@@ -75,6 +75,11 @@ export const products = [
       'compartment with a zippered pocket and two ' +
       'slip pockets. ',
     availableColors: ['#FFF', '#000', '#CADCA7', '#F79F1F'],
+    images: [
+      require('./assets/product1.png'),
+      require('./assets/product1.png'),
+      require('./assets/product1.png'),
+    ],
   },
   {
     id: 2,
@@ -90,5 +95,10 @@ export const products = [
       'luxurious and stylish pair of sneakers that are perfect for ' +
       'everyday wear. ',
     availableColors: ['#FFF', '#000', '#CADCA7', '#F79F1F'],
+    images: [
+      require('./assets/product2.png'),
+      require('./assets/product2.png'),
+      require('./assets/product2.png'),
+    ],
   },
 ];

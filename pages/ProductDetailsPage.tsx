@@ -1,6 +1,5 @@
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {
-  Image,
   Platform,
   StyleSheet,
   Text,
@@ -18,6 +17,7 @@ import ReviewStars from '../components/ProductDetailsPage/ReviewStars.tsx';
 import Sizes from '../components/ProductDetailsPage/Sizes.tsx';
 import Colors from '../components/ProductDetailsPage/Colors.tsx';
 import {favoriteStore, cartStore} from '../zustandStore.ts';
+import ScrollImages from '../components/ProductDetailsPage/ScrollImages.tsx';
 function ProductDetailsPage({
   navigation,
   route,
@@ -33,11 +33,11 @@ function ProductDetailsPage({
   let isFavorite = favorites.includes(product.id);
   const {cart, removeProduct, addProduct} = cartStore();
   let isAdded = cart.find(item => item.id === product.id);
+
   return (
     <SafeAreaView style={styles.container}>
-      <View className={'relative w-[full h-[430px]'}>
-        <Image className={'h-full w-full'} source={product.image} />
-
+      <View className={'relative w-[full] h-[430px]'}>
+        <ScrollImages images={product.images} />
         <View
           className={
             'absolute top-5 px-5 w-full flex-row justify-between items-center'
